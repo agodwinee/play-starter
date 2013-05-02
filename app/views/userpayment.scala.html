@@ -1,0 +1,36 @@
+
+@(userPayment:models.UserPaymentView)
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<p>
+User: @userPayment.userView.name
+</p>
+<p>
+Payments:
+@if(userPayment.paymentView.isDefined){
+<table>
+<thead>
+<th>Date due</th>
+<th>Payment type</th>
+    <th>Amount</th>
+<thead>
+    <tbody>
+        @for(taxEvent <- userPayment.paymentView.get.payments){
+            <tr>
+            <td>@taxEvent.dueTimestamp</td>
+            <td>@taxEvent.paymentType</td>
+            <td>@taxEvent.amount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+}else{
+There are no payments
+}
+</p>
+</body>
+</html>

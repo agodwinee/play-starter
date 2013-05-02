@@ -1,0 +1,27 @@
+
+@(paymentView:models.PaymentView)
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payments</title>
+</head>
+<body>
+<h1>Payments</h1>
+<table>
+    <thead>
+        <th>Date due</th>
+        <th>Payment type</th>
+        <th>Amount</th>
+    <thead>
+    <tbody>
+        @for(paymentEvent <- paymentView.payments){
+            <tr>
+                <td>@paymentEvent.dueTimestamp</td>
+                <td>@paymentEvent.paymentType</td>
+                <td>@paymentEvent.amount</td>
+            </tr>
+        }
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+    "id": "/user/pid/79d5c6bd-cdbf-4227-8494-7ae92d964f0d",
+    "regimes": {
+        "sa": {
+            "user": "/sa/user/8907352908"
+        },
+        "vat": {
+            "user": "/vat/user/493647312"
+        }
+    },
+    "regimeIds": {
+        "utr": "8907352908",
+        "nino": "NB12432114B",
+        "vrn": "493647312"
+    },
+    "name": {
+        "title": "Mr",
+        "firstName": "Jeff",
+        "lastName": "Fisher",
+        "others": [
+        ]
+    },
+    "createdAt": 1367398090518,
+    "lastLogin": 1367225290490,
+    "contactDetails": null,
+    "otherAccounts": [
+    ]
+}

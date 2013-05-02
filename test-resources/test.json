@@ -1,0 +1,18 @@
+{
+    "name": "Fred",
+    "wife": "Wilma",
+    "address": {
+        "line1": "1 High Street",
+        "line2": null,
+        "town": "Bedrock",
+        "postcode": "BD1 4WW"
+    },
+    "regimes": {
+        "vat": {
+            "user": "/vat/user/493647312"
+        },
+        "sa": {
+            "user": "/sa/user/8907352908"
+        }
+    }
+}

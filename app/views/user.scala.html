@@ -1,0 +1,24 @@
+@(user:models.UserView)
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+User : @user.name
+<br/>
+@if(user.regimes.contains("sa")){
+    <h3>Self Assessment</h3>
+    <a href="/sa/home">Home</a>
+}
+@if(user.regimes.contains("vat")){
+    <h3>Vat</h3>
+    <a href="/vat/home">Home</a>
+}
+@if(user.regimes.contains("paye")){
+    <h3>PAYE</h3>
+    <a href="/paye/home">Home</a>
+}
+
+</body>
+</html>

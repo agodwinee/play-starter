@@ -1,0 +1,93 @@
+{
+    "id": "/user/pid/79d5c6bd-cdbf-4227-8494-7ae92d964f0d",
+    "payments": [
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1367884800000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1370563200000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1373155200000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1375833600000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1378512000000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1381104000000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1383782400000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1386374400000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1389052800000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1391731200000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1394150400000,
+            "paymentType": "TimeToPayDirectDebit"
+        },
+        {
+            "amount": 720.07,
+            "dueTimestamp": 1396828800000,
+            "paymentType": "TimeToPayDirectDebit"
+        }
+    ],
+    "period": "Monthly",
+    "directDebit": {
+        "accountNumber": "953922355",
+        "sortCode": "23-43-42",
+        "accountHolders": ["J Fisher"],
+        "depository": {
+            "type": "BANK",
+            "name": "Halifax",
+            "address": {
+                "lineOne": "1 High Street",
+                "lineTwo": "Weybridge",
+                "lineThree": null,
+                "lineFour": null,
+                "lineFive": null,
+                "postcode": "KT13 8AA",
+                "country": null
+            }
+        },
+        "originatorId": null,
+        "referenceNumber": null,
+        "createdAt": null
+    },
+    "tsAndCs": null,
+    "paymentState": null,
+    "createdDate": 1367229741302,
+    "amountOwed": 9345.60,
+    "hasAppliedBefore": false,
+    "reason": "unexpected_high_liability"
+}
