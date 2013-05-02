@@ -10,7 +10,7 @@ class PaymentViewBuilder {
     implicit val paymentReads = (
       (__ \ "amount").read[BigDecimal] and
       (__ \ "dueTimestamp").read[Long] and
-      (__ \ "type").read[String]
+      (__ \ "paymentType").read[String]
     )(PaymentEvent.apply _)
 
 //    implicit val paymentReads = Json.reads[PaymentEvent]

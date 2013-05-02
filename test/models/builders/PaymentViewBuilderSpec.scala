@@ -17,8 +17,8 @@ class PaymentViewBuilderSpec extends Specification {
 
       view.payments.size mustEqual(12)
       view.payments.head.amount mustEqual(BigDecimal("720.07"))
-      view.payments.head.due mustEqual(1367884800000L)
-      view.payments.head.eventType mustEqual("TimeToPayDirectDebit")
+      view.payments.head.dueTimestamp mustEqual(1367884800000L)
+      view.payments.head.paymentType mustEqual("TimeToPayDirectDebit")
 
       view.period mustEqual("Monthly")
       view.created mustEqual(1367229741302L)
