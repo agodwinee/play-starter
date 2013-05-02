@@ -27,10 +27,12 @@ object Tests extends Controller {
 
   def getUserPayment(pid:String) = Action {
     Async {
-      async((userServiceClient.getUser(pid), userServiceClient.getPaymentSchedule(pid)),
+      async(userServiceClient.getUser(pid),
         responseToUser,
+        userServiceClient.getPaymentSchedule(pid),
         responseToPayment,
-        userPaymentToResult)
+        userPaymentToResult
+      )
     }
   }
 
@@ -70,20 +72,21 @@ object Tests extends Controller {
   }
 
   def async[A](response:Future[Response],
-               f:Response => A,
-               r:Future[A] => Future[Result]) : Future[Result] = {
-    r(response.map (f))
+               extractor:Response => A,
+               aggregator:Future[A] => Future[Result]) : Future[Result] = {
+    aggregator(response.map (extractor))
   }
 
-  def async[A,B](responses:(Future[Response],Future[Response]),
-                 f1:Response => A, f2:Response => B,
-                 r:(Future[A],Future[B]) => Future[Result]) : Future[Result] = {
-    r(responses._1.map (f1), responses._2.map (f2))
+  def async[A,B](responseA:Future[Response], extractorA:Response => A,
+                 responseB:Future[Response], extractorB:Response => B,
+                 aggregator:(Future[A],Future[B]) => Future[Result]) : Future[Result] = {
+    aggregator(responseA.map (extractorA), responseB.map (extractorB))
   }
 
-  def async[A,B,C](responses:(Future[Response],Future[Response],Future[Response]),
-                   f1:Response => A, f2:Response => B, f3:Response => C,
-                   r:(Future[A],Future[B],Future[C]) => Future[Result]) : Future[Result] = {
-    r(responses._1.map (f1), responses._2.map (f2), responses._3.map (f3))
+  def async[A,B,C](responseA:Future[Response], extractorA:Response => A,
+                   responseB:Future[Response], extractorB:Response => B,
+                   responseC:Future[Response], extractorC:Response => C,
+                   aggregator:(Future[A],Future[B],Future[C]) => Future[Result]) : Future[Result] = {
+    aggregator(responseA.map (extractorA), responseB.map (extractorB), responseC.map (extractorC))
   }
 }
